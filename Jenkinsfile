@@ -7,7 +7,7 @@ pipeline {
             }
         }
         parameters {
-            choice choices:{ 'Prod','UAT','Dev' },name: ''environment 
+             choice choices: ['dev', 'qa', 'uat', 'prod'], name: 'environment'
         stage ('build') {
             steps {
                 echo "This is build stage"
